@@ -11,15 +11,15 @@ type AttrType = {
     disabled?: boolean
     elems?: Array<SelectType>
     active: string
-    setActive: Dispatch<SetStateAction<string>>
+    setActive: (event: string) => void//Dispatch<SetStateAction<string>>
 }
 
 const SelectElem: React.FC<AttrType> = ({id, active, setActive, elems, disabled}) => {
 
     let handleChange = (event: string) => {
-        let a = event
         setActive(event)
     }
+
     return (
         <FormControl size="small">
             <Select
@@ -30,15 +30,15 @@ const SelectElem: React.FC<AttrType> = ({id, active, setActive, elems, disabled}
                 onChange={event => handleChange(event.target.value)}
                 value={active}
             >
-                <MenuItem value={1}>
+                <MenuItem value={'ru'}>
                     <img className={'select__img'} src={require('../../../image/rus.png')} alt={'flag'}/>
                     Русский
                 </MenuItem>
-                <MenuItem value={2}>
+                <MenuItem value={'en'}>
                     <img className={'select__img'} src={require('../../../image/usa.png')} alt={'flag'}/>
                     Английский
                 </MenuItem>
-                <MenuItem value={3}>
+                <MenuItem value={'tr'}>
                     <img className={'select__img'} src={require('../../../image/turce.png')} alt={'flag'}/>
                     Турецкий
                 </MenuItem>

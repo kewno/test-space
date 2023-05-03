@@ -4,15 +4,16 @@ import './language.sass'
 import {Dispatch, SetStateAction} from "react";
 
 type AttrType = {
+    id: string
     active: string
-    setActive: Dispatch<SetStateAction<string>>
+    setActive: (event: string) => void//Dispatch<SetStateAction<string>>
 }
 
-const Language: React.FC<AttrType> = ({active, setActive}) => {
+const Language: React.FC<AttrType> = ({id,active, setActive}) => {
     return (
         <div className='language'>
             <p className='language__headline'>Выберите язык:</p>
-            <SelectElem id={'main'} active={active} setActive={setActive}/>
+            <SelectElem id={id} active={active} setActive={setActive}/>
         </div>
     )
 }

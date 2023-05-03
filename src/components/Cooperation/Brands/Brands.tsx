@@ -2,17 +2,19 @@ import * as React from 'react'
 import './brands.sass'
 import BrandList from "../../ui/BrandList/BrandList";
 import Headline from "../../ui/Headline/Headline";
-import {BrandType} from "../../../types/types";
+import {DataBrendsItem} from "../../../types/types";
 
 type AttrType = {
-    elems: BrandType[]
+    elems: DataBrendsItem[]
+    count: number
 }
 
-const Brands: React.FC<AttrType> = ({elems}) => {
+const Brands: React.FC<AttrType> = ({elems, count}) => {
     return (
         <div className='brands'>
             <div className='brands__headline'>
                 <Headline
+                    count={count}
                     headline='бренд'
                     text='Официальный дилер мировых брендов-производителей.'
                     href='/'

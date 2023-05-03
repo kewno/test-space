@@ -9,19 +9,19 @@ type AttrType = {
     headline: string
     text: string
     icon: ReactNode
-    coll?: number
+    count?: number
     href?: string
     textButton?: string
 }
 
-const Headline: React.FC<AttrType> = ({href, textButton,headline, icon,text, coll = 0}) => {
+const Headline: React.FC<AttrType> = ({href, textButton,headline, icon,text, count = 0}) => {
     return (
         <div className='headline'>
             <h2 className="headline__headline">
                 <SvgIcon className='headline__svg' viewBox="0 0 26 32">
                     {icon}
                 </SvgIcon>
-                {`${coll} ${headline}`}
+                {`${count} ${headline}`}
             </h2>
             <p className="headline__text">{text}</p>
             {href ?

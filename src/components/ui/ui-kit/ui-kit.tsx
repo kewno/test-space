@@ -46,12 +46,12 @@ const UiKit: React.FC<AttrType> = ({}) => {
                     <ButtonElem href={'/'} startIcon={<DeleteIcon />}>Иконка</ButtonElem>
                 </Grid>
                 <Grid item xs={3}>
-                    <SelectElem
-                        id={'select--ui-kit'}
-                        elems={[{value: 1, text: 'first'}]}
-                        active={selectActive}
-                        setActive={setSelectActive}
-                    />
+                    {/*<SelectElem*/}
+                    {/*    id={'select--ui-kit'}*/}
+                    {/*    elems={[{value: 1, text: 'first'}]}*/}
+                    {/*    active={selectActive}*/}
+                    {/*    setActive={setSelectActive}*/}
+                    {/*/>*/}
                 </Grid>
                 <Grid item xs={3}>
                     <Image alt={'no-found'}/>
@@ -62,23 +62,23 @@ const UiKit: React.FC<AttrType> = ({}) => {
                 <Grid item xs={3}>
                     <Brand src={'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png'} alt={'found'}/>
                 </Grid>
-                <BrandList elems={[
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '1'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '2'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/150122/espa-150x150.png', alt: '3'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '4'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/149584/zetkama-150x150.png', alt: '5'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '6'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '7'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '8'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/218144/giacomoni-150x150.png', alt: '9'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '10'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '11'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/317704/thermex-150x150.png', alt: '12'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '13'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/317704/thermex-150x150.png', alt: '14'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/218144/giacomoni-150x150.png', alt: '15'},
-                ]}/>
+                {/*<BrandList elems={[*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '1'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '2'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/150122/espa-150x150.png', alt: '3'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '4'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/149584/zetkama-150x150.png', alt: '5'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '6'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '7'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '8'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/218144/giacomoni-150x150.png', alt: '9'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '10'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '11'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/317704/thermex-150x150.png', alt: '12'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '13'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/317704/thermex-150x150.png', alt: '14'},*/}
+                {/*    {src: 'https://image.stoking.ru/uploads/thumbnails/218144/giacomoni-150x150.png', alt: '15'},*/}
+                {/*]}/>*/}
 
             </Grid>
             <div className='ui-kit__product'>

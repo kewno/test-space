@@ -3,13 +3,17 @@ import AppBar from "../ui/AppBar/AppBar";
 import BreadcrumbsElem from "../ui/BreadcrumbsElem/BreadcrumbsElem";
 import Language from "./Language/Language";
 import './cooperation.sass'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Banner from "./Banner/Banner";
 import Stages from "./Stages/Stages";
 import Information from "./Information/Information";
 import Brands from "./Brands/Brands";
 import Products from "./Products/Products";
 import Footer from "./Footer/Footer";
+import {setDataBrandsThunkCreator} from "../../redux/brandsReducer";
+import {useDispatch, useSelector} from "react-redux";
+import {AppDispatch, AppStateType} from "../../redux/store";
+import {actions} from "../../redux/languageReducer";
 
 type AttrType = {
 
@@ -17,7 +21,21 @@ type AttrType = {
 
 const Cooperation: React.FC<AttrType> = ({}) => {
 
-    let [active, setActive] = useState('1')
+    let dispatch: AppDispatch = useDispatch()
+
+    let language = useSelector((state: AppStateType) => state.language.language) //setLanguage
+
+    let handleChangeLanguage = (event: string) => {
+        dispatch(actions.setLanguage(event))
+    }
+
+    let dataBrends = useSelector( (state: AppStateType) => state.brands.brands)
+    let countBrends = useSelector((state: AppStateType) => state.brands.meta.totalCount)
+
+    useEffect(() => {
+        dispatch(setDataBrandsThunkCreator())
+        dispatch(actions.getLanguage())
+    }, []);
 
     return (
         <div className='cooperation'>
@@ -26,7 +44,7 @@ const Cooperation: React.FC<AttrType> = ({}) => {
             </div>
             <div className="cooperation__breadcrumbs-select">
                 <BreadcrumbsElem elems={[{href: '/', text: 'Сотрудничество Stoking'}]}/>
-                <Language active={active} setActive={setActive}/>
+                <Language id={'main'} active={language} setActive={handleChangeLanguage}/>
             </div>
             <div className="cooperation__banner">
                 <Banner/>
@@ -38,23 +56,7 @@ const Cooperation: React.FC<AttrType> = ({}) => {
                 <Information/>
             </div>
             <div className="cooperation__brands">
-                <Brands elems={[
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '1'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '2'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/150122/espa-150x150.png', alt: '3'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '4'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/149584/zetkama-150x150.png', alt: '5'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '6'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '7'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '8'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/218144/giacomoni-150x150.png', alt: '9'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '10'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '11'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/317704/thermex-150x150.png', alt: '12'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/179040/navien-150x150.png', alt: '13'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/317704/thermex-150x150.png', alt: '14'},
-                    {src: 'https://image.stoking.ru/uploads/thumbnails/218144/giacomoni-150x150.png', alt: '15'},
-                ]}/>
+                <Brands elems={dataBrends} count={countBrends}/>
             </div>
             <div className="cooperation__products">
                 <Products elems={[

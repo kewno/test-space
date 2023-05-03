@@ -1,12 +1,12 @@
 import * as React from 'react'
 import './brand-list.sass'
 import Brand from "./Brand/Brand";
-import {BrandType} from "../../../types/types";
+import {DataBrendsItem} from "../../../types/types";
 import {Grid} from "@mui/material";
 import BrandListBorder from "./BrandListBorder/BrandListBorder";
 
 type AttrType = {
-    elems: BrandType[]
+    elems: DataBrendsItem[]
 }
 
 const BrandList: React.FC<AttrType> = ({elems}) => {
@@ -15,8 +15,8 @@ const BrandList: React.FC<AttrType> = ({elems}) => {
             <BrandListBorder/>
             <Grid className='brand-list__elems' container spacing={2}>
                 {elems.map(el => {
-                    return <Grid item xs={4}>
-                        <Brand src={el.src} alt={el.alt}/>
+                    return <Grid key={el.id} item xs={4}>
+                        <Brand src={el.thumbnail.sizes[0].path} alt={el.name}/>
                     </Grid>
                 })}
             </Grid>
