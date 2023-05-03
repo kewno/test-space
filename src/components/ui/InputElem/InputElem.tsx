@@ -11,7 +11,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 type AttrType = {
     id: string
     label: string
-    value: any
+    value: string
     onChange: Dispatch<SetStateAction<string>>
     func?: () => void
 }

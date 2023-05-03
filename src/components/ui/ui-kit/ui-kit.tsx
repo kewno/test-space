@@ -12,6 +12,8 @@ import Product from "../ProductList/Product/Product";
 import ProductList from "../ProductList/ProductList";
 import AppBar from "../AppBar/AppBar";
 import BreadcrumbsElem from "../BreadcrumbsElem/BreadcrumbsElem";
+import Headline from "../Headline/Headline";
+import Footer from "../../Cooperation/Footer/Footer";
 
 type AttrType = {
 
@@ -23,6 +25,11 @@ const UiKit: React.FC<AttrType> = ({}) => {
 
     return (
         <div>
+            <Headline
+                headline='Бренд'
+                text='Официальный дилер мировых брендов-производителей.'
+                icon={<path d="M21 8.64706L11 3L6 5.82353M21 8.64706V21.3529L11 27M21 8.64706L16 11.4706M11 27V14.2941M11 27L1 21.3529V8.64706M11 14.2941L1 8.64706M11 14.2941L16 11.4706M1 8.64706L6 5.82353M6 5.82353L16 11.4706M16 11.4706V15" stroke="#ED7117" stroke-linecap="round" stroke-linejoin="round"/>}
+            />
             <BreadcrumbsElem elems={[{href: '/', text: 'Сотрудничество Stoking'}]}/>
             <AppBar/>
             <Grid container spacing={2}>
@@ -97,6 +104,7 @@ const UiKit: React.FC<AttrType> = ({}) => {
                 // price={'1875'}
                 // article={'S21A ПЛАСТИНА'}
             />
+
         </div>
     )
 }
