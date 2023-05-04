@@ -3,16 +3,14 @@
   margin: 128px -16px 40px
   padding: 28px 0 0
 
-.footer-container
-
 .footer-list
   display: flex
   justify-content: space-between
   list-style-type: none
-  max-width: 933px
+  max-width: 965px
   margin: 0 auto
-  padding: 0
-
+  padding: 0 16px
+  box-sizing: border-box
 
   &__href
     font-family: 'Nunito', sans-serif
@@ -37,3 +35,21 @@
 
   &__solid
     text-decoration-line: underline
+
+
+@media (max-width: 940px)
+  .footer
+    margin: 58px -16px 20px
+    padding: 28px 0 50px
+
+  .footer-list
+    flex-wrap: wrap
+    justify-content: space-around
+    max-width: 540px
+
+    &__elem
+      padding: 0 10px
+
+    &__elem:first-child
+      margin-bottom: 5px
+

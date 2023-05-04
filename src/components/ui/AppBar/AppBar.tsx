@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import InputElem from "../InputElem/InputElem";
 import {useState} from "react";
 import AppBarNavigation from "./AppBarNavigation/AppBarNavigation";
+import IconButton from "@mui/material/IconButton";
 
 type AttrType = {
 
@@ -16,6 +17,10 @@ type AttrType = {
 const AppBar: React.FC<AttrType> = ({}) => {
 
     let [value, setValue] = useState('')
+
+    let handleOpenBurger = () => {
+
+    }
 
     return (
         <div className='app-bar'>
@@ -30,6 +35,12 @@ const AppBar: React.FC<AttrType> = ({}) => {
             </div>
             <div className="app-bar__navigation">
                 <AppBarNavigation/>
+            </div>
+
+            <div className="app-bar__burger" onClick={handleOpenBurger}>
+                <IconButton>
+                    <MenuIcon />
+                </IconButton>
             </div>
         </div>
     )

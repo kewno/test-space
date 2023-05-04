@@ -13,20 +13,15 @@ const BrandList: React.FC<AttrType> = ({elems}) => {
     return (
         <div className='brand-list'>
             <BrandListBorder/>
-            <Grid className='brand-list__elems' container spacing={2}>
-                {elems.map(el => {
-                    return <Grid key={el.id} item xs={4}>
-                        <Brand src={el.thumbnail.sizes[0].path} alt={el.name}/>
-                    </Grid>
-                })}
-            </Grid>
+                <Grid className='brand-list__elems' container spacing={2}>
+                    {elems.map(el => {
+                        return <Grid key={el.id} item md={4} xs={6}>
+                            <Brand src={el.thumbnail.sizes[0].path} alt={el.name}/>
+                        </Grid>
+                    })}
+                </Grid>
             <BrandListBorder type={'reverse'}/>
         </div>
-        // <div className='brand-list'>
-        //     {elems.map(el => {
-        //         return <Brand src={el.src} alt={el.alt}/>
-        //     })}
-        // </div>
     )
 }
 

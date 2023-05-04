@@ -24,3 +24,21 @@
 svg.headline__svg
   fill: none
   margin-right: 4px
+
+
+@media (max-width: 940px)
+  .headline
+    display: flex
+    flex-direction: column
+    &__headline
+      font-size: 16px
+      margin: 0 auto
+
+    &__text
+      font-size: 14px
+      margin: 10px 0 0
+      text-align: center
+
+    &__button button.button-elem
+      max-width: 500px
+      margin: 20px auto 0

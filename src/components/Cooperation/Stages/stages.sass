@@ -48,3 +48,26 @@
 svg.stages-elem__svg
   width: 71.62px
   height: 71.62px
+
+
+@media (max-width: 940px)
+  .stages
+    padding: 54px 0 0 0
+
+    &__headline
+      font-size: 20px
+
+  .stages-elems
+    margin: 40px 0 0
+    flex-direction: column
+
+    &__dash
+      width: 0
+      height: 88px
+      border-top: none
+      margin: 12px auto
+      border-right: 3px dashed var(--orange)
+
+  .stages-elem
+    &__headline
+      margin: 5px 0 0

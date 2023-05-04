@@ -14,6 +14,7 @@ import {setDataBrandsThunkCreator} from "../../redux/brandsReducer";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch, AppStateType} from "../../redux/store";
 import {actions} from "../../redux/languageReducer";
+import Menu from "../ui/Menu/Menu";
 
 type AttrType = {
 
@@ -69,6 +70,10 @@ const Cooperation: React.FC<AttrType> = ({}) => {
             </div>
             <div className="cooperation__footer">
                 <Footer/>
+            </div>
+
+            <div className="cooperation__menu">
+                <Menu />
             </div>
         </div>
     )
