@@ -1,12 +1,11 @@
 import * as React from 'react'
 import SelectElem from "../../ui/SelectElem/SelectElem";
 import './language.sass'
-import {Dispatch, SetStateAction} from "react";
 
 type AttrType = {
     id: string
     active: string
-    setActive: (event: string) => void//Dispatch<SetStateAction<string>>
+    setActive: (event: string) => void
 }
 
 const Language: React.FC<AttrType> = ({id,active, setActive}) => {

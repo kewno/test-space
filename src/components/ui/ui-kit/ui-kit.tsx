@@ -3,23 +3,17 @@ import './ui-kit.sass'
 import ButtonElem from "../Button/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import {Grid} from "@mui/material";
-import SelectElem from "../SelectElem/SelectElem";
 import {useState} from "react";
 import Image from "../Image/Image";
 import Brand from "../BrandList/Brand/Brand";
-import BrandList from "../BrandList/BrandList";
 import Product from "../ProductList/Product/Product";
 import ProductList from "../ProductList/ProductList";
 import AppBar from "../AppBar/AppBar";
 import BreadcrumbsElem from "../BreadcrumbsElem/BreadcrumbsElem";
 import Headline from "../Headline/Headline";
-import Footer from "../../Cooperation/Footer/Footer";
 
-type AttrType = {
 
-}
-
-const UiKit: React.FC<AttrType> = ({}) => {
+const UiKit = () => {
 
     let [selectActive, setSelectActive] = useState('')
 
@@ -30,7 +24,7 @@ const UiKit: React.FC<AttrType> = ({}) => {
                 text='Официальный дилер мировых брендов-производителей.'
                 icon={<path d="M21 8.64706L11 3L6 5.82353M21 8.64706V21.3529L11 27M21 8.64706L16 11.4706M11 27V14.2941M11 27L1 21.3529V8.64706M11 14.2941L1 8.64706M11 14.2941L16 11.4706M1 8.64706L6 5.82353M6 5.82353L16 11.4706M16 11.4706V15" stroke="#ED7117" stroke-linecap="round" stroke-linejoin="round"/>}
             />
-            <BreadcrumbsElem elems={[{href: '/', text: 'Сотрудничество Stoking'}]}/>
+            <BreadcrumbsElem elems={[{id: 1, href: '/', text: 'Сотрудничество Stoking'}]}/>
             <AppBar/>
             <Grid container spacing={2}>
                 <Grid item xs={4}>
@@ -83,6 +77,7 @@ const UiKit: React.FC<AttrType> = ({}) => {
             </Grid>
             <div className='ui-kit__product'>
                 <Product
+                    id={1}
                     alt={'image'}
                     name={'S21A Пластина AiSi 316 0,5 mm TK 1234'}
                     src={'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'}
@@ -92,17 +87,12 @@ const UiKit: React.FC<AttrType> = ({}) => {
 
             </div>
             <ProductList elems={[
-                {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА'},
-                {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
-                {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
-                {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
-                {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
-            ]}
-                // alt={'image'}
-                // name={'S21A Пластина AiSi 316 0,5 mm TK 1234'}
-                // src={'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'}
-                // price={'1875'}
-                // article={'S21A ПЛАСТИНА'}
+                    {id: 1, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА'},
+                    {id: 2, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
+                    {id: 3, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
+                    {id: 4, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
+                    {id: 5, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
+                ]}
             />
 
         </div>

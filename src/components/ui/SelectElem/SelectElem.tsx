@@ -11,7 +11,7 @@ type AttrType = {
     disabled?: boolean
     elems?: Array<SelectType>
     active: string
-    setActive: (event: string) => void//Dispatch<SetStateAction<string>>
+    setActive: (event: string) => void
 }
 
 const SelectElem: React.FC<AttrType> = ({id, active, setActive, elems, disabled}) => {

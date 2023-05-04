@@ -9,6 +9,7 @@ export type BrandType = {
 }
 
 export type ProductType = {
+    id: number
     src?: string
     alt: string
     name: string
@@ -17,6 +18,7 @@ export type ProductType = {
 }
 
 export type BreadcrumbsItem = {
+    id: number
     href: string
     text: string
 }

@@ -1,8 +1,6 @@
 import * as React from 'react'
 import {Breadcrumbs, Link} from "@mui/material";
 import SvgIcon from "@mui/material/SvgIcon";
-// import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-// import Link from '@material-ui/core/Link';
 import './breadcrumbs.sass'
 import {BreadcrumbsItem} from "../../../types/types";
 
@@ -23,7 +21,7 @@ const BreadcrumbsElem: React.FC<AttrType> = ({elems}) => {
                 </SvgIcon>
             </Link>
             {elems?.map(el => {
-                return <Link color="inherit" href={el.href} className={'breadcrumbs__text'}>
+                return <Link key={el.id} color="inherit" href={el.href} className={'breadcrumbs__text'}>
                     {el.text}
                 </Link>
             })}

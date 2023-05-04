@@ -20,7 +20,6 @@ const ButtonElem: React.FC<AttrType> = ({id,startIcon, href, children, disabled,
 
     return (
         <Button
-            //classes={{ button: 'button-elem' }}
             className="button-elem"
             id={id}
             href={href}

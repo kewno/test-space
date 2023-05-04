@@ -3,7 +3,7 @@ import AppBar from "../ui/AppBar/AppBar";
 import BreadcrumbsElem from "../ui/BreadcrumbsElem/BreadcrumbsElem";
 import Language from "./Language/Language";
 import './cooperation.sass'
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import Banner from "./Banner/Banner";
 import Stages from "./Stages/Stages";
 import Information from "./Information/Information";
@@ -16,11 +16,9 @@ import {AppDispatch, AppStateType} from "../../redux/store";
 import {actions} from "../../redux/languageReducer";
 import Menu from "../ui/Menu/Menu";
 
-type AttrType = {
 
-}
 
-const Cooperation: React.FC<AttrType> = ({}) => {
+const Cooperation = () => {
 
     let dispatch: AppDispatch = useDispatch()
 
@@ -44,7 +42,7 @@ const Cooperation: React.FC<AttrType> = ({}) => {
                 <AppBar/>
             </div>
             <div className="cooperation__breadcrumbs-select">
-                <BreadcrumbsElem elems={[{href: '/', text: 'Сотрудничество Stoking'}]}/>
+                <BreadcrumbsElem elems={[{id: 1, href: '/', text: 'Сотрудничество Stoking'}]}/>
                 <Language id={'main'} active={language} setActive={handleChangeLanguage}/>
             </div>
             <div className="cooperation__banner">
@@ -61,11 +59,11 @@ const Cooperation: React.FC<AttrType> = ({}) => {
             </div>
             <div className="cooperation__products">
                 <Products elems={[
-                    {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА'},
-                    {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
-                    {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
-                    {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
-                    {alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
+                    {id: 1, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА'},
+                    {id: 2, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
+                    {id: 3, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
+                    {id: 4, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/218933/fitingi-150x150.png'},
+                    {id: 5, alt: 'image', name: 'S21A Пластина AiSi 316 0,5 mm TK 1234', price: '1875', article: 'S21A ПЛАСТИНА', src: 'https://image.stoking.ru/uploads/thumbnails/276973/f642d375a5970d68b9d85ee128c6b591s800x0-1-150x150.jpg'},
                 ]}/>
             </div>
             <div className="cooperation__footer">

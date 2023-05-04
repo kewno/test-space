@@ -3,16 +3,8 @@ import Image from "../../Image/Image";
 import './product.sass'
 import {ProductType} from "../../../../types/types";
 
-// type AttrType = {
-//     src?: string
-//     alt: string
-//     name: string
-//     price: string
-//     article: string
-// }
 
-const Product: React.FC<ProductType> = ({src, alt, name, price, article}) => {
-
+const Product: React.FC<ProductType> = ({id,src, alt, name, price, article}) => {
 
     let paddingPrice = (price: string) => {
         let priceLength = price.length

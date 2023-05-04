@@ -1,11 +1,7 @@
 import * as React from 'react'
 import './logo.sass'
 
-type AttrType = {
-
-}
-
-const Logo: React.FC<AttrType> = () => {
+const Logo = () => {
     return (
         <a href='/' className='logo'>Stoking</a>
     )

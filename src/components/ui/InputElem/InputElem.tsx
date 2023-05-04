@@ -2,9 +2,7 @@ import * as React from 'react'
 import './input-elem.sass'
 import TextField from '@mui/material/TextField';
 import {Dispatch, SetStateAction} from "react";
-// import {IconButton, InputAdornment} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
-//import {IconButton, InputAdornment} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from '@mui/material/InputAdornment';
 
@@ -50,5 +48,5 @@ const InputElem: React.FC<AttrType> = ({id, label, value, onChange, func}) => {
     )
 }
 
-// @ts-ignore
+
 export default InputElem

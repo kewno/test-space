@@ -1,11 +1,8 @@
 import * as React from 'react'
 import './information.sass'
 
-type AttrType = {
 
-}
-
-const Information: React.FC<AttrType> = ({}) => {
+const Information = () => {
 
     return (
         <div className='information-container'>

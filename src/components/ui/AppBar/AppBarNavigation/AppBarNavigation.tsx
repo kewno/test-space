@@ -3,11 +3,8 @@ import './app-bar-navigation.sass'
 import IconButton from "@mui/material/IconButton";
 import SvgIcon from '@mui/material/SvgIcon';
 
-type AttrType = {
 
-}
-
-const AppBarNavigation: React.FC<AttrType> = ({}) => {
+const AppBarNavigation = () => {
 
     return (
         <div className='app-bar-navigation'>

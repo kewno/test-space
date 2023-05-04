@@ -8,13 +8,8 @@ import {useState} from "react";
 import AppBarNavigation from "./AppBarNavigation/AppBarNavigation";
 import IconButton from "@mui/material/IconButton";
 
-type AttrType = {
 
-}
-
-
-
-const AppBar: React.FC<AttrType> = ({}) => {
+const AppBar = () => {
 
     let [value, setValue] = useState('')
 
