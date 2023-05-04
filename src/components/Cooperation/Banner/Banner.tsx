@@ -7,10 +7,12 @@ const Banner = () => {
     return (
         <div className='banner'>
             <h1 className='banner__headline'>Stoking — маркетплейс промышленного оборудования</h1>
+
             <p className='banner__text'>Владеете складом промышленного оборудования или производите его? Начни продавать уже сейчас</p>
             <div className='banner__button'>
                 <ButtonElem href='/'>Стать продавцом на Stoking</ButtonElem>
             </div>
+
             <SvgIcon className='banner__banner' viewBox="0 0 739 222">
                 <path d="M0.500381 75.7539L64.1778 51.0004L126.5 75.7539V150H0.500381V75.7539Z" fill="#ED7117"/>
                 <path fillRule="evenodd" clipRule="evenodd" d="M62.1251 49.4015C61.7944 50.161 62.142 51.0449 62.9015 51.3756L124.901 78.3756C125.661 78.7064 126.545 78.3588 126.876 77.5993C127.206 76.8398 126.859 75.9559 126.099 75.6251L64.0993 48.6251C63.3397 48.2944 62.4559 48.6419 62.1251 49.4015Z" fill="#4F4A4A"/>
